@@ -15,6 +15,7 @@
 	<description>Mais informacoes na url do github.</description>
 	<files>
 		<filename module="mod_barradogoverno">mod_barradogoverno.php</filename>
+		<folder>assets</folder>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
