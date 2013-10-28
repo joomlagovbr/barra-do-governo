@@ -8,8 +8,9 @@ $anexar_js     = $params->get("anexar_js_2014", "");
 $endereco_js   = $params->get("endereco_js_2014", "");
 $document      =& JFactory::getDocument();
 
-if( $anexar_js == 2) {	
-	$document->addScript( 'http://barra.brasil.gov.br/barra.js?cor=verde' );
+if( $anexar_js == 2) {
+	$script = '<script type="text/javascript" src="'.$endereco_js.'"></script><noscript>&nbsp;<!-- item para fins de acessibilidade --></noscript>';
+	$document->addCustomTag($script);	
 }
 
 if ($correcoes_ie8 == 'hide') {
