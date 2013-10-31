@@ -28,7 +28,24 @@
 					name="layout"
 					type="modulelayout"
 					label="Modelo da barra do governo"
-					description="Escolher versão 2012 ou 2014 da barra. Nova barra possui dados provenientes diretamente do SERPRO." />
+					description="Escolher versão 2012 ou 2014 da barra. Nova barra possui dados provenientes diretamente do SERPRO."
+					default="default" />
+			</fieldset>
+			<fieldset name="opcoes_barra_2014" label="Opções de configuração da barra padrão">
+				<field name="anexar_js_2014" type="list" default="1" label="Anexar arquivo JS" description="Anexa arquivo JS, se disponível para a versão da barra.">
+					<option value="2">dentro da chamada de scripts do Joomla</option>
+					<option value="1">dentro do DIV da barra</option>
+					<option value="0">não anexar</option>		
+		  		</field>
+		  		<field name="endereco_js_2014" type="text" default="http://barra.brasil.gov.br/barra.js?cor=verde" label="Endereço do script externo" description="Dados provenientes de externamente." size="35" />
+		  		<field type="spacer" hr="true" />		  		
+				<field name="mensagem_ie6_2014" type="textarea" cols="40" rows="3" default="Seu navegador é incompatível com os novos padrões de tecnologia e por isso você não pode visualizar a nova barra do Governo Federal. Atualize ou troque seu navegador." label="Mensagem de incompatibilidade com IE 6" description="Deixe vazio para não exibir" />				
+				<field name="correcoes_ie8_2014" type="list" default="show_css" label="Correções para IE 7 e IE8" description="Decide o que fazer quando o navegador do usuário for IE7 ou IE8, casos em que o css da barra do governo não é carregado corretamente.">
+					<option value="hide">Não exibir a barra</option>
+					<option value="show">Exibir a barra sem realizar correções</option>
+					<option value="show_css">Exibir barra utilizando css mencionado abaixo</option>							
+		  		</field>
+		  		<field name="link_css_ie8_2014" type="text" default="{URL_SITE}/modules/mod_barradogoverno/assets/2014/css/ie8.css" label="Link CSS para IE inferior a 9" description="Utilizar {URL_SITE} como referência à URL base do site" size="60" />
 			</fieldset>
 			<fieldset name="opcoes_barra_2012" label="Opções da barra 2012">
 				<field name="anexar_css_2012" type="list" default="1" label="Anexar arquivos CSS" description="Anexa arquivo css padrão da barra.">
@@ -62,25 +79,9 @@
 					<option value="_blank">_blank</option>		
 		  		</field>	  		
 			</fieldset>
-			<fieldset name="opcoes_barra_2014" label="Opções da barra 2014">
-				<field name="anexar_js_2014" type="list" default="1" label="Anexar arquivo JS" description="Anexa arquivo JS, se disponível para a versão da barra.">
-					<option value="2">dentro da chamada de scripts do Joomla</option>
-					<option value="1">dentro do DIV da barra</option>
-					<option value="0">não anexar</option>		
-		  		</field>
-		  		<field name="endereco_js_2014" type="text" default="http://barra.brasil.gov.br/barra.js?cor=verde" label="Endereço do script externo" description="Dados provenientes de externamente." size="35" />
-		  		<field type="spacer" hr="true" />		  		
-				<field name="mensagem_ie6_2014" type="textarea" cols="40" rows="3" default="Seu navegador é incompatível com os novos padrões de tecnologia e por isso você não pode visualizar a nova barra do Governo Federal. Atualize ou troque seu navegador." label="Mensagem de incompatibilidade com IE 6" description="Deixe vazio para não exibir" />				
-				<field name="correcoes_ie8_2014" type="list" default="show_css" label="Correções para IE 7 e IE8" description="Decide o que fazer quando o navegador do usuário for IE7 ou IE8, casos em que o css da barra do governo não é carregado corretamente.">
-					<option value="hide">Não exibir a barra</option>
-					<option value="show">Exibir a barra sem realizar correções</option>
-					<option value="show_css">Exibir barra utilizando css mencionado abaixo</option>							
-		  		</field>
-		  		<field name="link_css_ie8_2014" type="text" default="{URL_SITE}/modules/mod_barradogoverno/assets/2014/css/ie8.css" label="Link CSS para IE inferior a 9" description="Utilizar {URL_SITE} como referência à URL base do site" size="60" />
-			</fieldset>
-			<fieldset name="opcoes_barra_custom" label="Opções da barra customizada">
-				<field name="head_custom" type="textarea" cols="50" rows="20" default="" filter="raw" label="Código personalizado para o head da página" description="" />
-				<field name="html_custom" type="textarea" cols="50" rows="20" default="" filter="raw" label="Código personalizado para a barra" description="" />
+			<fieldset name="opcoes_barra_manual" label="Opções da barra configurada manualmente">
+				<field name="head_manual" type="textarea" cols="50" rows="20" default="" filter="raw" label="Código personalizado para o head da página" description="" />
+				<field name="html_manual" type="textarea" cols="50" rows="20" default="" filter="raw" label="Código personalizado para a barra" description="" />
 			</fieldset>
 			<fieldset
 				name="advanced">

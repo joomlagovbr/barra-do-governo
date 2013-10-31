@@ -19,7 +19,7 @@ else
 $document =& JFactory::getDocument();
 if( $anexar_css == 1)
 {
-	$document->addStyleSheet( JURI::root() . 'modules/mod_barradogoverno/assets/2012/css/barradogoverno.css' );
+	$document->addStyleSheet( JURI::root() . 'modules/mod_barradogoverno/assets/modelo2012/css/barradogoverno.css' );
 	if( $largura_barra != 970 )
 	{
 		$style = '#barra-brasil-container { width:'.$largura_barra.'px }';

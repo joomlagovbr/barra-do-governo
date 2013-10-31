@@ -1,8 +1,8 @@
 <?php
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-$head     = $params->get("head_custom", "");
-$html     = $params->get("html_custom", "");
+$head     = $params->get("head_manual", "");
+$html     = $params->get("html_manual", "");
 $document =& JFactory::getDocument();
 
 if($head != '')
